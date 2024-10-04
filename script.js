@@ -12,7 +12,7 @@ function upDate(previewPic){
   x = document.getElementById('image')
   asdasdasd = previewPic.src
   console.log(asdasdasd)
-  x.textContent = " "
+  x.textContent = `${previewPic.alt}`
   x.style.backgroundImage = `url(${asdasdasd})`
 	}
 
