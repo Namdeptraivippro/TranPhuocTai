@@ -19,7 +19,7 @@ function upDate(previewPic){
   x.tabIndex = `dsadsa`
 	}
 
-elementIndex = 0
+let elementIndex;
 
 	function unDo(asdasd){
      /* In this function you should 
@@ -29,23 +29,22 @@ elementIndex = 0
     2) Change the text  of the div with the id = "image" 
     back to the original text.  You can use the html code to see what that original text was
     */
+    elementIndex++
+    if (elementIndex == 7){
+      elementIndex = 0
+    }
+    
 		asdasd.className = "preview"              
     asd = document.getElementById('image')
     asd.style.background = `none`
     asd.style.backgroundColor = `#8e68ff`
     asd.textContent = "Hover over an image below to display here."
-    asd.focus()
-    elementIndex++
+    if (asdasd.id == 'pic6') {
+      document.getElementById("firstPic7").focus()
+    }
 	}
 
 //Focus element used to call focus on load
 function tabFocus(dsadsa){
   dsadsa.focus()
-}
-
-
-function nextElement(){
-  allElement = document.querySelectorAll(".preview")
-  allElement[elementIndex%6].focus()
-  console.log(elementIndex) 
 }

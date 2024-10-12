@@ -32,3 +32,10 @@ body{
 img{
 		width:95%;
 }
+.pic7{
+  border-width: 0px;
+  width: 0px;
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+}
