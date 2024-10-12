@@ -11,10 +11,15 @@ function upDate(previewPic){
   previewPic.className = "selectedPic"
   x = document.getElementById('image')
   asdasdasd = previewPic.src
-  console.log(asdasdasd)
   x.textContent = `${previewPic.alt}`
   x.style.backgroundImage = `url(${asdasdasd})`
+  x.style.backgroundRepeat = "no-repeat"
+  x.style.backgroundSize = "contain"
+  dsadsa = previewPic.tabIndex + 1
+  x.tabIndex = `dsadsa`
 	}
+
+elementIndex = 0
 
 	function unDo(asdasd){
      /* In this function you should 
@@ -29,4 +34,18 @@ function upDate(previewPic){
     asd.style.background = `none`
     asd.style.backgroundColor = `#8e68ff`
     asd.textContent = "Hover over an image below to display here."
+    asd.focus()
+    elementIndex++
 	}
+
+//Focus element used to call focus on load
+function tabFocus(dsadsa){
+  dsadsa.focus()
+}
+
+
+function nextElement(){
+  allElement = document.querySelectorAll(".preview")
+  allElement[elementIndex%6].focus()
+  console.log(elementIndex) 
+}
